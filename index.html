@@ -1,57 +1,49 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Sbdug-meeting-2015 by kmader</title>
-
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <script src="javascripts/scale.fix.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-
+    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+    <title>Sbdug-meeting-2015 by 4Quant</title>
   </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <h1>Sbdug-meeting-2015</h1>
-        <p>Recent improvements in acquisition, detectors, and automation in imaging science has meant that medical doctors and biologists now regularly encounter terabyte-sized datasets which well-exceed the scope for individual, manual analysis. To confront this issue we have adopted tools and approaches from the Big Data community to make scaling up to and beyond terabytes easy.</p>
-        <p class="view"><a href="https://github.com/kmader/sbdug-meeting-2015">View the Project on GitHub <small>kmader/sbdug-meeting-2015</small></a></p>
-        <ul>
-          <li><a href="https://github.com/kmader/sbdug-meeting-2015/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/kmader/sbdug-meeting-2015/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/kmader/sbdug-meeting-2015">View On <strong>GitHub</strong></a></li>
-        </ul>
-      </header>
-      <section>
-        <h1>
-<a id="making-scaling-simple-using-big-data-to-improve-imaging" class="anchor" href="#making-scaling-simple-using-big-data-to-improve-imaging" aria-hidden="true"><span class="octicon octicon-link"></span></a>Making Scaling Simple: Using Big Data to Improve Imaging</h1>
 
-<p><strong><a href="https://rawgit.com/4Quant/sbdug-meeting-2015/master/microscopy-big-data.html">The presentation</a></strong></p>
+  <body>
+    <div id="container">
+      <div class="inner">
+
+        <header>
+          <h1>Sbdug-meeting-2015</h1>
+          <h2>Making Scaling Simple: Using Big Data to Improve Imaging </h2>
+        </header>
+
+        <section id="downloads" class="clearfix">
+          <a href="https://github.com/4Quant/sbdug-meeting-2015/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
+          <a href="https://github.com/4Quant/sbdug-meeting-2015/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
+          <a href="https://github.com/4Quant/sbdug-meeting-2015" id="view-on-github" class="button"><span>View on GitHub</span></a>
+        </section>
+
+        <hr>
+
+        <section id="main_content">
+          <p>The presentation <strong><a href="https://rawgit.com/4Quant/sbdug-meeting-2015/master/microscopy-big-data.html">as slides</a></strong>, <strong><a href="https://rawgit.com/4Quant/sbdug-meeting-2015/master/printable.html">as a handout</a></strong>, <strong><a href="https://rawgit.com/4Quant/sbdug-meeting-2015/master/printable.pdf">as printable pdf</a></strong></p>
 
 <h2>
 <a id="kevin-mader-4quant-and-eth-zurich" class="anchor" href="#kevin-mader-4quant-and-eth-zurich" aria-hidden="true"><span class="octicon octicon-link"></span></a>Kevin Mader (4Quant and ETH Zurich)</h2>
 
 <p>The presentation given at Swiss Big Data Users Group (<a href="http://www.bigdata-usergroup.ch/item/816648">http://www.bigdata-usergroup.ch/item/816648</a>) on image processing on large, diverse datasets using <a href="http://spark.apache.org">Apache Spark</a> as a back-end.</p>
 
-<p>Kevin Mader is a lecturer in the X-ray Microscopy Group within the Department for Information Technology and Electrical Engineering at ETH Zurich. His research focuses on turning big hairy 3D images into simple, robust, reproducible numbers without resorting to black boxes or magic. In particular, as part of several collaborations, he is currently working on automatically segmenting full animal zebrafish images, characterizing rheology in 3D flows, and measuring viral infection dynamics in cell lines.</p>
+<p>Kevin Mader is the founder of 4Quant(<a href="http://www.4quant.com">http://www.4quant.com</a>) and lecturer in the X-ray Microscopy Group within the Department for Information Technology and Electrical Engineering at ETH Zurich. His research focuses on turning big hairy 3D images into simple, robust, reproducible numbers without resorting to black boxes or magic. In particular, as part of several collaborations, he is currently working on automatically segmenting full animal zebrafish images, characterizing rheology in 3D flows, and measuring viral infection dynamics in cell lines.</p>
 
 <h2>
-<a id="abstract" class="anchor" href="#abstract" aria-hidden="true"><span class="octicon octicon-link"></span></a>Abstract</h2>
+<a id="summary" class="anchor" href="#summary" aria-hidden="true"><span class="octicon octicon-link"></span></a>Summary</h2>
 
-<p>With improvements in flux, detector efficiency, and reconstruction algorithms, the rate at which image data is produced in Synchrotron-based X-ray Tomographic Microscopy is staggering. At the TOMCAT beamline of the Swiss Light Source, this rate reaches 8GB per second [1], higher than even multinational companies with dedicated IT staff like Facebook or Instagram usually handle. We have developed a scalable framework based on Apache Spark and the Resilient Distributed Datasets proposed in [2] for parallel, distributed, real-time image processing and quantitative analysis. The framework extends easily from single machines to clusters and even cloud-based solutions. With sufficient computational power, real-time data exploration and hypothesis testing over millions of structures is possible. The tools have been tested on clusters containing thousands of machines and images containing more than 100 billion voxels. The flexible infrastructure [3] offers a full spectrum of filtering, segmentation, shape, distribution, and connectivity metrics for cellular materials and networks. It can furthermore be adapted and integrated with the availability of 3rd party libraries to handle new studies or different types of analysis (like spectral-imaging) without significant changes. The framework paves the way for a new era of detailed, customizable investigations of studies with high sample counts ranging from long-term dynamics and evolution experiments to investigations of drug-gene interactions.</p>
-
-<h3>
-<a id="references" class="anchor" href="#references" aria-hidden="true"><span class="octicon octicon-link"></span></a>References</h3>
-
-<ul>
-<li>[1] Mokso, R., Marone, F., &amp; Stampanoni, M. (2009). Real-Time Tomography at the Swiss Light Source. In AIP Conf. Proc. SRI2009.</li>
-<li>[2] Zaharia, M., Chowdhury, M., Das, T., Dave, A., Ma, J., McCauley, M., … Stoica, I. (2012). Resilient distributed datasets: a fault-tolerant abstraction for in-memory cluster computing, 2.</li>
-<li>[3] Mader, K, Donahue, LR., R. Müller, M. Stampanoni, High-throughput, Scalable, Quantitative, Cellular Phenotyping using X-Ray Tomographic Microscopy, IWBBIO 2014, (Accepted)</li>
-</ul>
+<p>Recent improvements in acquisition, detectors, and automation in imaging science has meant that medical doctors and biologists now regularly encounter terabyte-sized datasets which well-exceed the scope for individual, manual analysis. To confront this issue we have adopted tools and approaches from the Big Data community to make scaling up to and beyond terabytes easy.</p>
 
 <h2>
 <a id="learn-more-at" class="anchor" href="#learn-more-at" aria-hidden="true"><span class="octicon octicon-link"></span></a>Learn more at</h2>
@@ -101,16 +93,14 @@
 <li>FEM Demo using GraphX - <a href="https://gist.github.com/kmader/6456262935af381c8dbe">https://gist.github.com/kmader/6456262935af381c8dbe</a>
 </li>
 </ul>
+        </section>
 
-<p>Recent improvements in acquisition, detectors, and automation in imaging science has meant that medical doctors and biologists now regularly encounter terabyte-sized datasets which well-exceed the scope for individual, manual analysis. To confront this issue we have adopted tools and approaches from the Big Data community to make scaling up to and beyond terabytes easy.</p>
-      </section>
-    </div>
-    <footer>
-      <p>Project maintained by <a href="https://github.com/kmader">kmader</a></p>
-      <p>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></p>
-    </footer>
-    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
-              <script type="text/javascript">
+        <footer>
+          Sbdug-meeting-2015 is maintained by <a href="https://github.com/4Quant">4Quant</a><br>
+          This page was generated by <a href="http://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.
+        </footer>
+
+                  <script type="text/javascript">
             var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
             document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
           </script>
@@ -121,5 +111,7 @@
             } catch(err) {}
           </script>
 
+      </div>
+    </div>
   </body>
 </html>
