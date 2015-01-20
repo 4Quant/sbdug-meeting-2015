@@ -1,8 +1,6 @@
 # Making Scaling Simple: Using Big Data to Improve Imaging 
 
-__[The presentation as Slides](https://rawgit.com/4Quant/sbdug-meeting-2015/master/microscopy-big-data.html)__
-__[as a handout](https://rawgit.com/4Quant/sbdug-meeting-2015/master/printable.html)__
-__[as printable pdf](https://rawgit.com/4Quant/sbdug-meeting-2015/master/printable.pdf)__
+The presentation __[as slides](https://rawgit.com/4Quant/sbdug-meeting-2015/master/microscopy-big-data.html)__, __[as a handout](https://rawgit.com/4Quant/sbdug-meeting-2015/master/printable.html)__, __[as printable pdf](https://rawgit.com/4Quant/sbdug-meeting-2015/master/printable.pdf)__
 
 ## Kevin Mader (4Quant and ETH Zurich)
 The presentation given at Swiss Big Data Users Group (http://www.bigdata-usergroup.ch/item/816648) on image processing on large, diverse datasets using [Apache Spark](http://spark.apache.org) as a back-end.
